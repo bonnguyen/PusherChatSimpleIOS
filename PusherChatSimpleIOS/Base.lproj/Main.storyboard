@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wC8-fw-CFh">
+                                <rect key="frame" x="0.0" y="20" width="620" height="44"/>
+                                <color key="barTintColor" red="0.70956550129999996" green="1" blue="0.23623362710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Chat Room" id="36w-pr-qUf"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ltz-Ut-TaG" userLabel="tblChatList">
+                                <rect key="frame" x="0.0" y="64" width="620" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifierChatItemSent" rowHeight="140" id="dO3-5W-BPS" customClass="ChatItemSent">
+                                        <rect key="frame" x="0.0" y="28" width="620" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dO3-5W-BPS" id="Kdj-TC-Tpp">
+                                            <rect key="frame" x="0.0" y="0.0" width="620" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5C-70-i9q" userLabel="lblMessageSent">
+                                                    <rect key="frame" x="8" y="8" width="529" height="87"/>
+                                                    <color key="backgroundColor" red="0.19552033799999999" green="0.74370446290000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bon.nguyen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMm-Vw-YLB" userLabel="lblNickNameSend">
+                                                    <rect key="frame" x="8" y="103" width="529" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="MEk-Fw-bB7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WMm-Vw-YLB" secondAttribute="bottom" constant="8" id="Gp4-dW-j5Z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WMm-Vw-YLB" secondAttribute="trailing" constant="75" id="J6F-ib-zIO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="U5C-70-i9q" secondAttribute="trailing" constant="75" id="LBu-gK-WKZ"/>
+                                                <constraint firstItem="WMm-Vw-YLB" firstAttribute="top" secondItem="U5C-70-i9q" secondAttribute="bottom" constant="8" id="Lf6-9v-Dp9"/>
+                                                <constraint firstItem="U5C-70-i9q" firstAttribute="leading" secondItem="Kdj-TC-Tpp" secondAttribute="leadingMargin" id="ReH-Nf-DHL"/>
+                                                <constraint firstItem="WMm-Vw-YLB" firstAttribute="leading" secondItem="Kdj-TC-Tpp" secondAttribute="leadingMargin" id="XUb-zm-wOg"/>
+                                                <constraint firstItem="U5C-70-i9q" firstAttribute="top" secondItem="Kdj-TC-Tpp" secondAttribute="topMargin" id="sgO-IR-cXV"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblMessage" destination="U5C-70-i9q" id="Dqr-Hc-PHo"/>
+                                            <outlet property="lblNickName" destination="WMm-Vw-YLB" id="9XQ-RJ-4zl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifierChatItemRcv" id="lyY-9x-wN0" customClass="ChatItemRcv">
+                                        <rect key="frame" x="0.0" y="168" width="620" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lyY-9x-wN0" id="gOd-NK-KvT">
+                                            <rect key="frame" x="0.0" y="0.0" width="620" height="139.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nguyen.le" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZP-bu-WXQ" userLabel="lblNickNameRcv">
+                                                    <rect key="frame" x="83" y="102" width="509" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="oad-w1-1vA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a message" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yq-Rn-qc2" userLabel="lblMessageRcv">
+                                                    <rect key="frame" x="83" y="8" width="509" height="86"/>
+                                                    <color key="backgroundColor" red="1" green="0.4517419506" blue="0.57752908459999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6ZP-bu-WXQ" firstAttribute="top" secondItem="0Yq-Rn-qc2" secondAttribute="bottom" constant="8" id="3cJ-Qc-CK6"/>
+                                                <constraint firstItem="0Yq-Rn-qc2" firstAttribute="leading" secondItem="gOd-NK-KvT" secondAttribute="leadingMargin" constant="75" id="7Gi-KV-VOj"/>
+                                                <constraint firstItem="0Yq-Rn-qc2" firstAttribute="top" secondItem="gOd-NK-KvT" secondAttribute="topMargin" id="KKg-Cq-mAn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6ZP-bu-WXQ" secondAttribute="trailing" constant="20" id="NjS-Xz-As5"/>
+                                                <constraint firstItem="6ZP-bu-WXQ" firstAttribute="leading" secondItem="gOd-NK-KvT" secondAttribute="leadingMargin" constant="75" id="O2V-zU-3jW"/>
+                                                <constraint firstItem="0Yq-Rn-qc2" firstAttribute="trailing" secondItem="gOd-NK-KvT" secondAttribute="trailingMargin" constant="-20" id="bMO-ff-bGD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6ZP-bu-WXQ" secondAttribute="bottom" constant="8" id="bjg-wo-DM7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblMessage" destination="0Yq-Rn-qc2" id="gJX-1V-6h9"/>
+                                            <outlet property="lblNickName" destination="6ZP-bu-WXQ" id="pMd-gC-YNR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPq-6I-iO7" userLabel="ViewBottom">
+                                <rect key="frame" x="0.0" y="548" width="620" height="52"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNH-BP-DTy" userLabel="tfMessage">
+                                        <rect key="frame" x="20" y="11" width="510" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lok-4u-oTD" userLabel="btnSend">
+                                        <rect key="frame" x="540" y="11" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="wCy-Bs-5Gj"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZHw-0Y-tb1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="tNH-BP-DTy" firstAttribute="leading" secondItem="zPq-6I-iO7" secondAttribute="leading" constant="20" id="CRK-eK-KKv"/>
+                                    <constraint firstItem="tNH-BP-DTy" firstAttribute="height" secondItem="Lok-4u-oTD" secondAttribute="height" id="QWv-eb-pqs"/>
+                                    <constraint firstItem="Lok-4u-oTD" firstAttribute="leading" secondItem="tNH-BP-DTy" secondAttribute="trailing" constant="10" id="R4C-Xm-Ddp"/>
+                                    <constraint firstItem="tNH-BP-DTy" firstAttribute="centerY" secondItem="zPq-6I-iO7" secondAttribute="centerY" id="YgB-e3-qVc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lok-4u-oTD" secondAttribute="trailing" constant="30" id="bpm-yc-mwH"/>
+                                    <constraint firstItem="Lok-4u-oTD" firstAttribute="centerY" secondItem="zPq-6I-iO7" secondAttribute="centerY" id="huo-K0-KH9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ltz-Ut-TaG" firstAttribute="top" secondItem="wC8-fw-CFh" secondAttribute="bottom" id="6Z0-ZX-GK1"/>
+                            <constraint firstItem="wC8-fw-CFh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="9Z4-UB-x56"/>
+                            <constraint firstItem="Ltz-Ut-TaG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="HhR-Kl-lDF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zPq-6I-iO7" secondAttribute="bottom" id="Pvg-Yk-EIA"/>
+                            <constraint firstItem="wC8-fw-CFh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="20" id="Q78-bC-tlc"/>
+                            <constraint firstItem="zPq-6I-iO7" firstAttribute="trailing" secondItem="Ltz-Ut-TaG" secondAttribute="trailing" id="dM3-Jh-xB3"/>
+                            <constraint firstItem="zPq-6I-iO7" firstAttribute="leading" secondItem="Ltz-Ut-TaG" secondAttribute="leading" id="eow-Sb-ZlO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ltz-Ut-TaG" secondAttribute="bottom" constant="60" id="iFK-yw-RPF"/>
+                            <constraint firstItem="zPq-6I-iO7" firstAttribute="top" secondItem="Ltz-Ut-TaG" secondAttribute="bottom" constant="8" symbolic="YES" id="itB-ni-bd5"/>
+                            <constraint firstItem="Ltz-Ut-TaG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="20" id="rvl-pN-V1r"/>
+                            <constraint firstItem="wC8-fw-CFh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="sZX-0k-XHI"/>
+                        </constraints>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wC8-fw-CFh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnSend" destination="Lok-4u-oTD" id="0ki-VR-Lt5"/>
+                        <outlet property="tblChatRoom" destination="Ltz-Ut-TaG" id="V3P-NT-Fro"/>
+                        <outlet property="tfMessage" destination="tNH-BP-DTy" id="TbT-Ks-eVt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="291"/>
+        </scene>
+    </scenes>
+</document>
